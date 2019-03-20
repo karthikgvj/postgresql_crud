@@ -1,0 +1,27 @@
+<h1>Create Here....</h1>
+<div align="center">
+
+<h2>Enter The Details</h2>
+<%= form_for @employees do |f| %>
+    <div>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :age %><br>
+        <%= f.number_field :age %>
+    </div>
+    <div>
+        <%= f.label :gender %><br>
+        <%= f.select(:gender, EmployeesController::GENDER) %>
+    </div>
+    <div>
+        <%= f.label :designation %><br>
+        <%= f.text_area :designation %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
+
+</div>
