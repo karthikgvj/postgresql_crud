@@ -29,7 +29,7 @@ class EmployeesController < ApplicationController
     end    
     def destroy
         @employees = Employee.find(params[:id])
-        @employees.destroy
+        @employees.destroy!
          redirect_to employees_path 
     end
     private
